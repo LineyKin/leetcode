@@ -8,13 +8,13 @@ import (
 
 // https://leetcode.com/problems/longest-common-prefix/description/
 
-type LongestCommonPrefixTask struct {
+type LongestCommonPrefixTask1 struct {
 	words []string
 	want  string
 }
 
-func TestLongestCommonPrefix(t *testing.T) {
-	testData := []LongestCommonPrefixTask{
+func TestLongestCommonPrefix1(t *testing.T) {
+	testData := []LongestCommonPrefixTask1{
 		{[]string{"flower", "flow", "flight"}, "fl"},
 		{[]string{"dog", "racecar", "car"}, ""},
 		{[]string{"dog", "dog", "dog"}, "dog"},
