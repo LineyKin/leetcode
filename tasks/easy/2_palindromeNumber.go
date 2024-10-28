@@ -3,7 +3,6 @@ package easy
 // https://leetcode.com/problems/palindrome-number/
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -22,8 +21,5 @@ func isPalindrome(x int) bool {
 
 	newX, _ := strconv.Atoi(string(xRunes))
 
-	fmt.Println(newX)
-
 	return newX == x
-
 }
