@@ -16,11 +16,17 @@ func SearchBST(root *TreeNode, val int) *TreeNode {
 		return root
 	}
 
-	var l, r *TreeNode
+	var l *TreeNode
 
 	if root.Left != nil {
 		l = SearchBST(root.Left, val)
 	}
+
+	if l != nil {
+		return l
+	}
+
+	var r *TreeNode
 
 	if root.Right != nil {
 		r = SearchBST(root.Right, val)
@@ -28,10 +34,6 @@ func SearchBST(root *TreeNode, val int) *TreeNode {
 
 	if r != nil {
 		return r
-	}
-
-	if l != nil {
-		return l
 	}
 
 	return nil
