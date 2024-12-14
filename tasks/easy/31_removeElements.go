@@ -8,13 +8,13 @@ func RemoveElements(head *ListNode, val int) *ListNode {
 	}
 
 	if head.Val == val {
-		head = removeElements(head.Next, val)
+		head = RemoveElements(head.Next, val)
 	}
 
 	resList := &ListNode{}
 	resList.Val = head.Val
 	if head.Next != nil {
-		resList.Next = removeElements(head.Next, val)
+		resList.Next = RemoveElements(head.Next, val)
 	}
 
 	return resList
